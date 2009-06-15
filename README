@@ -1,0 +1,36 @@
+= G3A::I18n
+
+== Summary
+
+This is an extension to the original Ruby/Rails I18n project, that should be
+found in activesupport's vendor directory.  G3A::I18n gives you the ability to
+localize Integers and Floats numbers through the well known I18n API, eg.:
+
+    require 'g3a/i18n'
+    I18n.locale = :hu
+    I18n.l 1234
+    # => "ezerkétszázharmincnégy"
+    I18n.l(1234.0 + 1/6.0)
+    # => "ezerkétszázharmincnégy és egy hatod"
+
+== Prerequisites
+
+You should install svenfuchs' i18n gem prior to this one.
+
+    gem install svenfuchs-i18n --source http://gems.github.com/
+
+== Installation
+
+    gem install gbence-g3a_i18n --source http://gems.github.com/
+
+== Licensing and contribution
+
+G3A::I18n is released under the MIT-LICENSE license, see the included license
+file for further information.  Suggestions, feedback, pull requests, patches,
+bug reports are mostly welcome to my github account or to
+mailto:gbence@algernon.hu.
+
+Some part of this project is forked of László Németh's localization project
+(http://hunspell.sourceforge.net/Soros.html), as well as the cloned gemspec and
+other misc files from Bálint Érdi's (http://github.com/balinterdi) various
+projects.

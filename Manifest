@@ -1,0 +1,14 @@
+CHANGELOG
+Rakefile
+MIT-LICENSE
+README
+g3a_i18n.gemspec
+lib/g3a.rb
+lib/g3a/i18n.rb
+init.rb
+locales/hu.yml
+spec/g3a_i18n_spec.rb
+spec/hu/float_spec.rb
+spec/hu/integer_spec.rb
+spec/spec_helper.rb
+Manifest
