@@ -17,7 +17,7 @@ Rake::RDocTask.new(:rdoc) do |t|
   t.rdoc_dir = 'rdoc'
   t.title    = 'G3A'
   t.options << '--line-numbers' << '--inline-source' << '--charset' << 'UTF-8'
-  t.rdoc_files.include('README')
+  t.rdoc_files.include('README.rdoc')
   t.rdoc_files.include('lib/**/*.rb')
 end
 

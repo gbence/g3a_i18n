@@ -1,7 +1,7 @@
 CHANGELOG
 Rakefile
 MIT-LICENSE
-README
+README.rdoc
 g3a_i18n.gemspec
 lib/g3a.rb
 lib/g3a/i18n.rb
