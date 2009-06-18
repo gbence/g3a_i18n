@@ -11,7 +11,7 @@ end
 
 module G3A::I18n::Backend
   class ObjectHandler < ::I18n::Backend::Simple
-    def localize locale, object, format=:default
+    def translate locale, object, format=:default
       case object
       when Float
         source = object.to_s
@@ -25,6 +25,15 @@ module G3A::I18n::Backend
           source.gsub!(Regexp.new(rule.keys.first), rule.values.first)
         end
         source
+      else
+        super
+      end
+    end
+
+    def localize locale, object, format=:default
+      case object
+      when Float
+      when Integer
       else
         super
       end

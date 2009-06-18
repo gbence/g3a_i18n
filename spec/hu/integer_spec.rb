@@ -7,9 +7,14 @@ context "Hungarian" do
   end
 
   describe "Integer" do
-    it "should be localized" do
+    it "can be localized" do
       lambda { I18n.l 1 }.should_not raise_error
       lambda { I18n.localize 1 }.should_not raise_error
+    end
+
+    it "can be translated" do
+      lambda { I18n.t 1 }.should_not raise_error
+      lambda { I18n.translate 1 }.should_not raise_error
     end
 
     {
@@ -50,11 +55,11 @@ context "Hungarian" do
       2_002_020_200_222 => 'kétbillió-kétmilliárd-húszmillió-kétszázezer-kétszázhuszonkettő',
       12_345_678_901_234_567_890 => 'tizenkéttrillió-háromszáznegyvenötbilliárd-hatszázhetvennyolcbillió-kilencszázegymilliárd-kétszázharmincnégymillió-ötszázhatvanhétezer-nyolcszázkilencven',
       -12_345_678_901_234_567_890 => 'mínusz tizenkéttrillió-háromszáznegyvenötbilliárd-hatszázhetvennyolcbillió-kilencszázegymilliárd-kétszázharmincnégymillió-ötszázhatvanhétezer-nyolcszázkilencven'
-    }.each do |number,localization|
+    }.each do |number,translation|
       instance_eval <<-EOC
         describe #{number}.to_s do
-          it "should equal to '#{localization}'" do
-            I18n.localize(#{number}).should == "#{localization}"
+          it "should equal to '#{translation}'" do
+            I18n.translate(#{number}).should == "#{translation}"
           end
         end
       EOC

@@ -1,7 +1,7 @@
 # Hungarian integer number names, described by László Németh (http://hunspell.sourceforge.net/Soros.html).
 # License: LGPL and BSD dual-license
 #
-# Integer modifications and floats by Bence Golda <gbence@algernon.hu>, (c) 2009, LGPL.
+# Integer modifications and floats by Bence Golda <gbence@algernon.hu>, (c) 2009, MIT-LICENSE.
 # 
 # Rule order is important!
 hu:

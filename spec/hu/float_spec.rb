@@ -7,9 +7,14 @@ context "Hungarian" do
   end
 
   describe "Float" do
-    it "should be localized" do
+    it "can be localized" do
       lambda { I18n.l 0.1 }.should_not raise_error
       lambda { I18n.localize 0.1 }.should_not raise_error
+    end
+
+    it "can be translated" do
+      lambda { I18n.t 0.1 }.should_not raise_error
+      lambda { I18n.translate 0.1 }.should_not raise_error
     end
 
     {
@@ -39,11 +44,11 @@ context "Hungarian" do
       1234.1234 => 'ezerkétszázharmincnégy egész ezerkétszázharmincnégy tízezred'
       #10.1234567 => 'tíz egész egy-kettő-három-négy-öt-hat-hét',
       #-10.1234567 => 'mínusz tíz egész egy-kettő-három-négy-öt-hat-hét'
-    }.each do |number,localization|
+    }.each do |number,translation|
       instance_eval <<-EOC
         describe #{number}.to_s do
-          it "should equal to '#{localization}'" do
-            I18n.localize(#{number}).should == "#{localization}"
+          it "should equal to '#{translation}'" do
+            I18n.translate(#{number}).should == "#{translation}"
           end
         end
       EOC

@@ -4,13 +4,13 @@
 
 This is an extension to the original Ruby/Rails I18n project, that should be
 found in activesupport's vendor directory.  G3A::I18n gives you the ability to
-localize Integers and Floats numbers through the well known I18n API, eg.:
+translate Integers and Floats through the well known I18n API, eg.:
 
     require 'g3a/i18n'
     I18n.locale = :hu
-    I18n.l 1234
+    I18n.t 1234
     # => "ezerkétszázharmincnégy"
-    I18n.l(1234.0 + 1/6.0)
+    I18n.t(1234.0 + 1/6.0)
     # => "ezerkétszázharmincnégy és egy hatod"
 
 == Prerequisites
