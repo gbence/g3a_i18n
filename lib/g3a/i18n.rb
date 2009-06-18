@@ -11,7 +11,7 @@ end
 
 module G3A::I18n::Backend
   class ObjectHandler < ::I18n::Backend::Simple
-    def translate locale, object, format=:default
+    def translate locale, object, options={}
       case object
       when Float
         source = object.to_s
@@ -21,8 +21,14 @@ module G3A::I18n::Backend
         source
       when Integer
         source = object.to_s
-        (translations[locale][:integer] || [] rescue []).each do |rule|
-          source.gsub!(Regexp.new(rule.keys.first), rule.values.first)
+        if options[:format] == :ordinal
+          (translations[locale][:integer_ordinal] || [] rescue []).each do |rule|
+            source.gsub!(Regexp.new(rule.keys.first), rule.values.first)
+          end
+        else
+          (translations[locale][:integer] || [] rescue []).each do |rule|
+            source.gsub!(Regexp.new(rule.keys.first), rule.values.first)
+          end
         end
         source
       else

@@ -1,3 +1,4 @@
+- v0.2.1:   Adding ordinals support.
 - v0.2.0:   Changing API (localize -> translate), and license.
 - v0.1.1:   Githubbing README.
 - v0.1.0:   Initial release.

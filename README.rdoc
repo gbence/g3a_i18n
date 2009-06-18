@@ -13,6 +13,11 @@ translate Integers and Floats through the well known I18n API, eg.:
     I18n.t(1234.0 + 1/6.0)
     # => "ezerkétszázharmincnégy és egy hatod"
 
+And it provides ordinals too...
+
+    I18n.t 1234, :format => :ordinal
+    # => "ezerkétszázharmincnegyedik"
+
 == Prerequisites
 
 You should install svenfuchs' i18n gem prior to this one.
