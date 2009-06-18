@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |s|
   s.name                      = 'g3a_i18n'
-  s.version                   = '0.1.1'
+  s.version                   = '0.2.0'
   s.required_rubygems_version = Gem::Requirement.new(">= 1.2") if s.respond_to? :required_rubygems_version=
   s.authors                   = ["Bence Golda"]
   s.email                     = 'gbence@algernon.hu'
-  s.date                      = '2009-06-15'
+  s.date                      = '2009-06-18'
   s.description               = 'Number localization extensions to the original (Ruby/Rails) I18n project.'
   s.executables               = %w{ }
   s.extra_rdoc_files          = %w{ README.rdoc }
